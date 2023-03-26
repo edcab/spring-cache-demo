@@ -10,7 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -34,16 +33,16 @@ public class CountryServiceImpl implements ICountryService {
 
         List<CountryEntity> collect = countryRepository.findAll();
 
-        List<CountryDTO> collect1 = collect.stream().map(this::convertToDTO)
+        List<CountryDTO> countryDTOS = collect.stream().map(this::convertToDTO)
             .collect(Collectors.toList());
 
-        return collect1;
+        return countryDTOS;
     }
 
     @Override
     public void refreshCache() {
         log.info("Refresh cache");
-        for(String name:cacheManager.getCacheNames()){
+        for (String name : cacheManager.getCacheNames()) {
             cacheManager.getCache(name).clear();
         }
     }
