@@ -1,4 +1,4 @@
-# **Implementación de Spring Boot Cache**
+# **Spring Boot Cache Demo**
 This project is an example of how to implement cache in a Spring Boot application using the @Cacheable annotation.
 
 ## **Requirements**
