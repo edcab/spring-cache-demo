@@ -42,8 +42,7 @@ To clear the cache, a method has been created in the **CountryController** class
 
 ## Cron expression
 
-To REfresh the cache every ten seconds, a cron expression has been added to the `@Scheduled annotation`, which is executed every ten seconds.
-This cron expression is in charge of calling the clearCache method of the **CountryServiceImpl** class, 
-which is in charge of clearing the cache.
+To Refresh the cache every ten seconds, a cron expression has been added to the config class with a `@Scheduled annotation`, which is executed every ten seconds.
+This cron expression is in charge of calling the clearCache method of the **CountryServiceImpl** class, which is in charge of clearing the cache.
 
 ![img_1.png](img_1.png)
