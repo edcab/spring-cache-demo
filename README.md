@@ -11,7 +11,7 @@ To run this project you need to have installed:
 ## **Run the application**
 
 **Clone this repository:** 
-git clone https://github.com/tu-usuario/spring-boot-cache.git
+git clone https://github.com/edcab/spring-cache-demo.git
 
 **Go to the root folder:** cd demo
 **Run the following command to build and run the application:** mvn spring-boot:run
